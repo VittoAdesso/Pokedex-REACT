@@ -50,8 +50,8 @@ body {
    background-color: #464646;
    color: white; 
    display: wrap;
-   justify-content: space-between;
-    margin-left: 30%; 
+   justify-content: center;
+   margin-left: 30%; 
    width: 50%;
    border-radius: 10px;
  
