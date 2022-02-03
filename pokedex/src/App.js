@@ -46,39 +46,44 @@ function App() {
   };
 
   return (
+
     <div className="App">
+
       <div className="TitleSection">
-        <h1>Pokédex</h1>
-        {/* configuro evento en el input */}
-        <input type="text" onChange={(event) => setPokemonName(event.target.value)   }
-        value={pokemonName.toLowerCase()}
 
-        />
+          <h1>Pokédex</h1>
+          {/* configuro evento en el input */}
+          <input type="text" onChange={(event) => setPokemonName(event.target.value)   }
+          value={pokemonName.toLowerCase()}
+          />
 
-        {/* doy funcionalidad al bontón */}
-        <div>
-              {pokemonName && <button onClick={searchPokemon}>Search Pokémon</button>}
-            </div>
+          {/* doy funcionalidad al bontón */}
+          <div>
+                {pokemonName && <button onClick={searchPokemon}>Search Pokémon</button>}
+          </div>
+
       </div>
 
-        <div className="DisplaySection">
+      <div className="DisplaySection">
 
-        {/* ternario en el return del componente */}
-        {!pokemonChosen ? (
-          <h1> Please choose a Pokémon </h1>
-        ) : (
-          <>
-            <h1>{pokemon.name}</h1>
-            <img src={pokemon.image} alt={pokemon.name} />
-            <h3>Number: #{pokemon.number}</h3>
-            <h3>Species: {pokemon.species}</h3>
-            <h3>Type: {pokemon.type}</h3>
-            <h4>Hp: {pokemon.hp}</h4>
-            <h4>Attack: {pokemon.attack}</h4>
-            <h4>Defense: {pokemon.defense}</h4>
-            <h4>Speed: {pokemon.speed}</h4>
-          </>
-        )}
+          {/* ternario en el return del componente */}
+          {!pokemonChosen ? (
+            <h1> Please choose a Pokémon </h1>
+          ) : (
+            <>
+            <div className='datos'>
+              <h1>{pokemon.name}</h1>
+              <img src={pokemon.image} alt={pokemon.name} />
+              <h3>Number: #{pokemon.number}</h3>
+              <h3>Species: {pokemon.species}</h3>
+              <h3>Type: {pokemon.type}</h3>
+              <h4>Hp: {pokemon.hp}</h4>
+              <h4>Attack: {pokemon.attack}</h4>
+              <h4>Defense: {pokemon.defense}</h4>
+              <h4>Speed: {pokemon.speed}</h4>
+              </div>
+            </>
+          )}
 
 
         </div>
