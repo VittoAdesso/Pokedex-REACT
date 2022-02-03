@@ -54,6 +54,7 @@ function App() {
           <h1>Pokédex</h1>
           {/* configuro evento en el input */}
           <input type="text" onChange={(event) => setPokemonName(event.target.value)   }
+          // que me convierta en lower case, para que me lea api
           value={pokemonName.toLowerCase()}
           />
 
@@ -71,8 +72,9 @@ function App() {
             <h1> Please choose a Pokémon </h1>
           ) : (
             <>
+
             <div className='datos'>
-              <h1>{pokemon.name}</h1>
+              <h1>{pokemon.name.toUpperCase()}</h1>
               <img src={pokemon.image} alt={pokemon.name} />
               <h3>Number: #{pokemon.number}</h3>
               <h3>Species: {pokemon.species}</h3>
@@ -82,7 +84,9 @@ function App() {
               <h4>Defense: {pokemon.defense}</h4>
               <h4>Speed: {pokemon.speed}</h4>
               </div>
+              
             </>
+
           )}
 
 
