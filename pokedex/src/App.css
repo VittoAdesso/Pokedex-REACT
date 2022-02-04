@@ -1,3 +1,4 @@
+/* estilo general */
 body {
     margin: 0;
     padding: 0;
@@ -45,6 +46,7 @@ body {
     cursor: pointer;
   }
 
+  /* estilos de tarjeta */
   .DisplaySection{
 
     display: flex;
@@ -60,7 +62,7 @@ body {
 
   }
 
-
+/* estilo datos de tarjeta */
   .datos{
 
     text-align: center;
@@ -68,7 +70,7 @@ body {
   
   }
 
-
+/* tamaño imagen  */
   img{
 
     width: 200px;
